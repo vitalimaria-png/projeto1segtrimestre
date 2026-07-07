@@ -2,197 +2,762 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Psicologia em Foco</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>Psicologia em Foco | Maria Clara Vitali</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+:root{
+    --roxo:#7667ff;
+    --lilas:#b39ddb;
+    --fundo:#f8f6ff;
+    --texto:#303030;
+}
+
+
+body{
+
+    font-family:Inter,sans-serif;
+    background:var(--fundo);
+    color:var(--texto);
+
+}
+
+
+
+/* CABEÇALHO */
+
+header{
+
+    background:
+    linear-gradient(135deg,#7667ff,#b39ddb);
+
+    color:white;
+
+    padding:30px 8%;
+
+}
+
+
+
+nav{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+
+
+.logo{
+
+    font-size:1.5rem;
+    font-weight:700;
+
+}
+
+
+
+nav ul{
+
+    display:flex;
+    gap:30px;
+    list-style:none;
+
+}
+
+
+
+nav a{
+
+    color:white;
+    text-decoration:none;
+
+}
+
+
+
+
+/* PARTE PRINCIPAL */
+
+.hero{
+
+    min-height:80vh;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+.hero h1{
+
+    font-family:"Playfair Display";
+
+    font-size:4rem;
+
+    max-width:600px;
+
+}
+
+
+
+.hero p{
+
+    margin:25px 0;
+
+    font-size:1.2rem;
+
+    line-height:1.7;
+
+    max-width:550px;
+
+}
+
+
+
+.hero a{
+
+    background:white;
+
+    color:#7667ff;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+
+
+
+.icone{
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:100px;
+
+    box-shadow:0 20px 50px #0003;
+
+}
+
+
+
+/* ARTIGOS */
+
+
+main{
+
+    width:85%;
+
+    margin:auto;
+
+}
+
+
+
+h2{
+
+    text-align:center;
+
+    margin:70px 0 40px;
+
+    font-family:"Playfair Display";
+
+    font-size:2.5rem;
+
+}
+
+
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+
+.card{
+
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 35px #0002;
+
+    transition:.3s;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.imagem{
+
+    height:220px;
+
+    background:
+
+    linear-gradient(135deg,#7667ff,#d7ccff);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:80px;
+
+}
+
+
+
+.conteudo{
+
+    padding:25px;
+
+}
+
+
+
+.categoria{
+
+    color:#7667ff;
+
+    font-weight:bold;
+
+}
+
+
+
+.conteudo h3{
+
+    margin:15px 0;
+
+    font-size:1.5rem;
+
+}
+
+
+
+.conteudo p{
+
+    line-height:1.8;
+
+}
+
+
+
+.autor{
+
+    color:#777;
+
+    margin:15px 0;
+
+    font-style:italic;
+
+}
+
+
+
+button{
+
+    border:none;
+
+    background:#eee8ff;
+
+    padding:10px 20px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    margin-right:8px;
+
+}
+
+
+
+button:hover{
+
+    background:#d8ccff;
+
+}
+
+
+
+/* SOBRE */
+
+
+.sobre{
+
+    margin:80px 0;
+
+    background:white;
+
+    padding:50px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    line-height:2;
+
+}
+
+
+
+
+footer{
+
+    background:#29234d;
+
+    color:white;
+
+    padding:35px;
+
+    text-align:center;
+
+}
+
+
+
+
+/* CELULAR */
+
+
+@media(max-width:900px){
+
+
+.hero{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:70px 0;
+
+}
+
+
+
+.hero h1{
+
+    font-size:2.5rem;
+
+}
+
+
+
+.grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+nav ul{
+
+    display:none;
+
+}
+
+
+
+.icone{
+
+    margin-top:40px;
+
+}
+
+
+}
+
+
+
+</style>
+
 </head>
+
+
 
 <body>
 
-<header>
-    <h1>🧠 Psicologia em Foco ✨</h1>
 
-    <p>
-        Um espaço educativo para entender a mente humana,
-        emoções e comportamento.
-    </p>
+
+<header>
+
+
+<nav>
+
+
+<div class="logo">
+🧠 Psicologia em Foco
+</div>
+
+
+<ul>
+
+<li><a href="#artigos">Artigos</a></li>
+
+<li><a href="#sobre">Sobre</a></li>
+
+</ul>
+
+
+</nav>
+
+
+
+<section class="hero">
+
+
+<div>
+
+
+<h1>
+Entendendo a mente humana
+</h1>
+
+
+<p>
+Um espaço educativo para compreender emoções,
+comportamentos e os processos psicológicos que fazem
+parte da vida humana.
+</p>
+
+
+<a href="#artigos">
+Ler conteúdos
+</a>
+
+
+</div>
+
+
+<div class="icone">
+🧠
+</div>
+
+
+</section>
+
+
 </header>
+
+
+
 
 
 <main>
 
 
-<article class="post">
 
-<img src="psicologia.jpg"
-alt="Imagem representando psicologia e cérebro humano">
+<section id="artigos">
+
+
+<h2>
+Artigos de Psicologia
+</h2>
+
+
+
+<div class="grid">
+
+
+
+<div class="card">
+
+
+<div class="imagem">
+🧠
+</div>
 
 
 <div class="conteudo">
 
-<h2>🌿 O que é Psicologia?</h2>
 
-<p class="artigo-autor">
-Publicado por Maria Clara Vitali
-</p>
+<div class="categoria">
+Psicologia
+</div>
+
+
+<h3>
+O que é Psicologia?
+</h3>
+
 
 <p>
-A Psicologia é a ciência que estuda os pensamentos,
-sentimentos e comportamentos humanos. Ela busca compreender
-como as pessoas percebem o mundo, aprendem, tomam decisões
-e constroem suas relações.
-</p>
-
-<p>
-Além de estudar transtornos psicológicos, a Psicologia também
-investiga temas como personalidade, memória, emoções,
-desenvolvimento humano, aprendizagem e qualidade de vida.
-</p>
-
-<p>
-O conhecimento psicológico está presente em diversas áreas,
-como educação, saúde, esportes, organizações e pesquisas
-científicas.
+A Psicologia é a ciência que estuda pensamentos,
+emoções e comportamentos humanos, buscando compreender
+como as pessoas percebem, sentem e interagem com o mundo.
 </p>
 
 
-<div class="botoes">
+<p class="autor">
+Por Maria Clara Vitali
+</p>
 
-<button class="love">
+
+<button>
 ❤️ <span>0</span>
 </button>
 
-<button class="like">
+
+<button>
 👍 <span>0</span>
 </button>
 
-</div>
 
 </div>
 
-</article>
+
+</div>
 
 
 
-<article class="post">
 
-<img src="psicologia.jpg"
-alt="Pessoa refletindo sobre emoções">
+
+<div class="card">
+
+
+<div class="imagem">
+💭
+</div>
 
 
 <div class="conteudo">
 
-<h2>💙 Como funcionam as emoções?</h2>
 
-<p class="artigo-autor">
-Publicado por Maria Clara Vitali
-</p>
+<div class="categoria">
+Emoções
+</div>
+
+
+<h3>
+Como funcionam as emoções?
+</h3>
+
 
 <p>
-As emoções são respostas naturais do cérebro diante de
-situações importantes. Elas influenciam nossos pensamentos,
-reações físicas e comportamentos.
-</p>
-
-<p>
-Sentimentos como alegria, medo, tristeza e raiva possuem
-funções importantes. Eles ajudam o ser humano a interpretar
-o ambiente e se adaptar aos desafios da vida.
-</p>
-
-<p>
-Compreender as próprias emoções é uma parte importante do
-autoconhecimento e do desenvolvimento psicológico.
+As emoções são respostas naturais do cérebro que influenciam
+nossas decisões, relações e maneiras de enfrentar situações.
 </p>
 
 
-<div class="botoes">
+<p class="autor">
+Por Maria Clara Vitali
+</p>
 
-<button class="love">
+
+<button>
 ❤️ <span>0</span>
 </button>
 
-<button class="like">
+
+<button>
 👍 <span>0</span>
 </button>
 
-</div>
 
 </div>
 
-</article>
+
+</div>
 
 
 
 
-<article class="post">
 
-<img src="psicologia.jpg"
-alt="Representação de terapia psicológica">
+
+<div class="card">
+
+
+<div class="imagem">
+🌱
+</div>
 
 
 <div class="conteudo">
 
-<h2>🧩 Como funciona a terapia psicológica?</h2>
 
-<p class="artigo-autor">
-Publicado por Maria Clara Vitali
-</p>
+<div class="categoria">
+Terapia
+</div>
+
+
+<h3>
+A importância da psicoterapia
+</h3>
+
 
 <p>
-A psicoterapia é um processo conduzido por um psicólogo
-qualificado, onde a pessoa pode refletir sobre pensamentos,
-emoções e comportamentos.
-</p>
-
-<p>
-Existem diferentes abordagens psicológicas, como a Psicologia
-Cognitivo-Comportamental, Psicanálise, Psicologia Humanista
-e outras linhas de estudo.
-</p>
-
-<p>
-A terapia busca ampliar o autoconhecimento e desenvolver
-formas mais saudáveis de lidar com dificuldades emocionais.
+A terapia psicológica é um processo de reflexão,
+autoconhecimento e compreensão dos pensamentos e sentimentos.
 </p>
 
 
-<div class="botoes">
+<p class="autor">
+Por Maria Clara Vitali
+</p>
 
-<button class="love">
+
+<button>
 ❤️ <span>0</span>
 </button>
 
-<button class="like">
+
+<button>
 👍 <span>0</span>
 </button>
 
-</div>
 
 </div>
 
-</article>
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section class="sobre" id="sobre">
+
+
+<h2>
+Sobre o projeto
+</h2>
+
+
+<p>
+O Psicologia em Foco é um projeto educativo criado por
+Maria Clara Vitali com o objetivo de apresentar conceitos
+da Psicologia de forma clara, profunda e acessível.
+
+O site aborda temas relacionados à mente humana,
+emoções, comportamento e desenvolvimento pessoal.
+</p>
+
+
+</section>
+
 
 
 </main>
 
 
+
+
+
 <footer>
 
 <p>
-🧠 Psicologia em Foco © 2026
-<br>
-Conteúdo educativo criado por Maria Clara Vitali.
+🧠 Psicologia em Foco
 </p>
+
+<p>
+Autora: Maria Clara Vitali
+</p>
+
+<p>
+© 2026 - Conteúdo educativo
+</p>
+
 
 </footer>
 
 
 
-<script src="script.js"></script>
+
+
+<script>
+
+
+const botoes = document.querySelectorAll("button");
+
+
+botoes.forEach(botao=>{
+
+
+botao.addEventListener("click",()=>{
+
+
+let contador = botao.querySelector("span");
+
+
+contador.textContent =
+Number(contador.textContent)+1;
+
+
+});
+
+
+});
+
+
+</script>
+
+
 
 </body>
 
